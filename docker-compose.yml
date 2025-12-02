@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: secure-docker-ci-pipeline-api:latest
+    container_name: secure-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+    networks:
+      - api-network
+    labels:
+      - "com.example.description=Secure Docker CI Pipeline Demo API"
+      - "com.example.version=1.0.0"
+
+networks:
+  api-network:
+    driver: bridge

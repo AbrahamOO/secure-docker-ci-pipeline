@@ -1,0 +1,8 @@
+# Act configuration file
+# This file configures the Act tool for running GitHub Actions locally
+
+# Use medium-sized image for better compatibility
+-P ubuntu-latest=catthehacker/ubuntu:act-latest
+
+# Enable verbose output
+-v
