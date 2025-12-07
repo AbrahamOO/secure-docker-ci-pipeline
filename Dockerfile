@@ -48,9 +48,9 @@ WORKDIR /app
 # Copy requirements and install only production dependencies
 COPY app/requirements.txt .
 RUN pip install --no-cache-dir \
-    fastapi==0.115.0 \
-    uvicorn[standard]==0.32.0 \
-    pydantic==2.9.2 && \
+    "fastapi==0.115.0" \
+    "pydantic==2.9.2" \
+    "uvicorn[standard]==0.32.0" && \
     rm -rf /root/.cache
 
 # Copy application code from builder stage
