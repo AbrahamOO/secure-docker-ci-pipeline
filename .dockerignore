@@ -7,11 +7,7 @@
 .github/
 .act/
 
-# Documentation
-README.md
-CONTRIBUTING.md
-PROJECT_OVERVIEW.md
-QUICKSTART.md
+# Documentation (not needed in container)
 *.md
 
 # Python

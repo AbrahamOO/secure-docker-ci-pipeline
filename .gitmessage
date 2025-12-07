@@ -1,0 +1,20 @@
+# Commit Message Template
+#
+# Format:
+# <type>: <subject>
+#
+# <body>
+#
+# Types: feat, fix, docs, style, refactor, test, chore
+#
+# Example:
+# feat: add user authentication
+#
+# - Implement JWT-based authentication
+# - Add login and registration endpoints
+# - Update tests for auth flows
+#
+# Do not include:
+# - AI-generated references
+# - Co-authored-by for AI tools
+# - Automated tool credits

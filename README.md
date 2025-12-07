@@ -1,15 +1,15 @@
 # Secure Docker CI Pipeline
 
-A production-ready demonstration of DevSecOps best practices featuring a containerized FastAPI microservice with comprehensive security automation, testing, and CI/CD pipeline.
+A hands-on project demonstrating DevSecOps practices with a containerized FastAPI microservice. This includes automated security scanning, comprehensive testing, and a complete CI/CD pipeline you can run entirely on your local machine.
 
-## 🎯 Project Overview
+## 🎯 What's Inside
 
-This project showcases:
+This project includes:
 - **Multi-stage Docker builds** for optimized production images
 - **Automated security scanning** with Trivy
 - **Dockerfile linting** with Hadolint
 - **Comprehensive test coverage** with pytest
-- **GitHub Actions CI/CD** pipeline (runnable locally with Act)
+- **GitHub Actions CI/CD** pipeline (runs locally with Act)
 - **Container orchestration** with Docker Compose
 - **Security best practices** (non-root user, minimal base image, health checks)
 
@@ -387,13 +387,69 @@ wrk -t4 -c100 -d30s http://localhost:8000/health
 
 ## 🤝 Contributing
 
-This is a demonstration project, but if you'd like to extend it:
+If you'd like to contribute or extend this project:
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run all tests and security scans
-5. Submit a pull request
+### Quick Start for Contributors
+
+1. **Fork and clone the repository**
+   ```bash
+   git clone https://github.com/your-username/secure-docker-ci-pipeline.git
+   cd secure-docker-ci-pipeline
+   ```
+
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Set up your development environment**
+   ```bash
+   # Create virtual environment
+   python3 -m venv .venv
+   source .venv/bin/activate
+
+   # Install dependencies
+   cd app && pip install -r requirements.txt
+   ```
+
+4. **Make your changes**
+   - Follow Python PEP 8 style guide
+   - Add tests for new functionality
+   - Update documentation as needed
+
+5. **Run the quality checks**
+   ```bash
+   # Run tests
+   make test
+
+   # Lint Dockerfile
+   make lint
+
+   # Build and verify
+   make verify
+
+   # Security scan
+   make scan
+   ```
+
+6. **Commit your changes**
+   - Use the commit template (already configured in this repo)
+   - Write clear, descriptive commit messages
+   - No AI-generated references or credits
+
+7. **Submit a pull request**
+   - Ensure all tests pass
+   - Reference any related issues
+   - Provide a clear description of changes
+
+### Code Quality Standards
+
+- **Test Coverage**: Maintain or improve existing coverage
+- **Security**: No critical or high vulnerabilities
+- **Documentation**: Clear comments and updated docs
+- **Dockerfile**: Must pass Hadolint checks
+
+I'm open to improvements, bug fixes, and new features that align with the project's goals. Feel free to open an issue to discuss major changes before implementing them.
 
 ## 📄 License
 
@@ -425,4 +481,4 @@ Use this checklist to verify the complete setup:
 
 ---
 
-**Built with ❤️ demonstrating DevSecOps excellence**
+**Questions or suggestions? Feel free to open an issue or submit a pull request!**

@@ -35,8 +35,9 @@ htmlcov/
 .tox/
 .hypothesis/
 
-# IDE
+# IDE - Personal configurations
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
@@ -57,3 +58,7 @@ reports/
 
 # CI/CD
 .act/
+
+# Git templates (included in repo for team consistency)
+# Uncomment below if you want to keep it personal:
+# .gitmessage
